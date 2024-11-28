@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-//commented
+
 const reviewSchema = new mongoose.Schema(
   {
     productId: {
@@ -21,7 +21,7 @@ const reviewSchema = new mongoose.Schema(
       max: 5,
       default: 0,
     },
-  },
+  }, 
   { timestamps: true }
 );
 
