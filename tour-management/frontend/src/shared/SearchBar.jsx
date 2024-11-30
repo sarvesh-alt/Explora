@@ -16,7 +16,7 @@ const SearchBar = () => {
         const maxGroupSize = maxGroupSizeRef.current.value
 
         if(location==='' || distance ==='' || maxGroupSize ===''){
-            return alert("All fields are required!");
+            return alert("All fields are required!"); 
         }
     }
   return <Col lg='12'>
