@@ -10,18 +10,19 @@ import {
     getFeaturedTour,
     getTourCount
   } from "../controllers/tourController.js"; // Import all required controllers
+  import { verifyAdmin } from "../utiils/verifyToken.js";
 
 
 const router = express.Router();
 
 //create new tour
-router.post('/', createTour);
+router.post('/', verifyAdmin, createTour);
 
 //update new tour
-router.put("/:id", updateTour);
+router.put("/:id", verifyAdmin, updateTour);
 
 //delete tour
-router.delete("/:id", deleteTour);
+router.delete("/:id",verifyAdmin, deleteTour);
 
 //get Single tour
 router.get("/:id", getSingleTour);

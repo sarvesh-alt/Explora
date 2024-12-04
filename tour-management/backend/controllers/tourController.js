@@ -6,7 +6,7 @@ export const createTour = async (req,res)=>{
 
     const newTour = new Tour(req.body);
 
-    try {
+    try { 
         const savedTour = await newTour.save();
 
         res
@@ -91,7 +91,10 @@ export const getAllTour = async(req,res)=>{
     console.log(page);
 
     try{
-        const tours = await Tour.find({}).skip(page * 8).limit(8);
+        const tours = await Tour.find({})
+        .populate('reviews')
+        .skip(page * 8)
+        .limit(8);
         res.status(200).json({
             success: true,
             count: tours.length,
