@@ -6,6 +6,7 @@ import tourData from '../assets/data/tours';
 import calculateAvgRating from './../utils/avgRating';
 import avatar from '../assets/images/avatar.jpg';
 import Booking from '../components/Booking/Booking';
+import Newsletter from '../shared/Newsletter';
 
 const TourDetails = () => {
 
@@ -32,16 +33,15 @@ const TourDetails = () => {
             <div className="tour__info">
               <h2>{title}</h2>
               <div className='d-flex alight-items-center gap-5'>
- 
                 <span className="tour__rating d-flex align-items-center gap-1">
-                <i class="ri-star-fill"
-                style={{'color': 'var(--secondary-color)'}}></i> {avgRating === 0 ? null: 
-                avgRating}
-                
-                {totalRating === 0 ? ("Not Rated") : (
-                <span>({reviews?.length})
-                </span>
-                )}   
+                  <i 
+                    class="ri-star-s-fill"
+                    style={{color: 'var(--secondary-color)'}}
+                  ></i> 
+                  {avgRating === 0 ? null: avgRating}
+                  {totalRating === 0 ? ("Not Rated") : (
+                  <span>({reviews?.length})</span>
+                  )}   
                 </span>
 
                 <span>
@@ -99,11 +99,12 @@ const TourDetails = () => {
 
         </Col>
         <Col lg='4'>
-         <Booking tour={tour} />
+         <Booking tour={tour} avgRating={avgRating} />
         </Col>
       </Row>
     </Container>
   </section>
+  <Newsletter />
   </>
 }
 
