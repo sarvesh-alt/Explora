@@ -27,9 +27,14 @@ const TourCard = ({tour}) => {
              <i class="ri-map-pin-line"></i>{city}
                 </span>   
                 <span className="tour__rating d-flex align-items-center gap-1">
-                <i class="ri-star-fill"></i> {avgRating}{" "}
-                <span>({reviews.length})</span>
-                </span>             
+                <i class="ri-star-fill"></i> {avgRating === 0 ? null: 
+                avgRating}
+                
+                {totalRating === 0 ? ("Not Rated") : (
+                <span>({reviews.length})
+                </span>
+                )}   
+                </span>       
             </div>
 
 
