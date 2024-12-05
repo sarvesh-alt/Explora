@@ -17,8 +17,8 @@ const FeaturedTourList = () => {
         </Col>
       ))}
       </>
-    };
+    
   );
-  
+};
 
 export default FeaturedTourList;
