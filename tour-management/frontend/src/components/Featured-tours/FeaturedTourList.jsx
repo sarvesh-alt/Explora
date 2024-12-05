@@ -3,6 +3,8 @@ import TourCard from '../../shared/TourCard'
 import tourData from '../../assets/data/tours'
 import {Col} from 'reactstrap'
 
+// watch 38:18 part of video after completing this code. or ask julekha!!
+
 const FeaturedTourList = () => {
   return( <>
   {
