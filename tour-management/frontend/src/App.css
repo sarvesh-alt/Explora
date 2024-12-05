@@ -96,11 +96,15 @@ ul {
   .primary__btn, .secondary__btn , .btn-dark{
     padding: 0.2rem 1.1rem !important;
   }
-<<<<<<< Updated upstream
   
     section{
       padding: 40px 0;
     }
-=======
->>>>>>> Stashed changes
+}
+
+
+@media only screen and (max-width: 768px){
+  .section__subtitle{
+    font-size: 1.3rem;
+  }
 }
