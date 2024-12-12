@@ -8,7 +8,7 @@ import NewsLetter from './../shared/Newsletter';
 import { Container, Row, Col } from 'reactstrap';
 import useFetch from '../hooks/useFetch';
 import {BASE_URL} from '../utils/config';
-
+import tourData from '../assets/data/tours';
 const Tours = () => {
   const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(0);
@@ -38,7 +38,7 @@ const Tours = () => {
             {error && <h4 className= "text-center pt-5"> {error} </h4>}
 
             {
-              !laoding && !error &&            <Row>
+              !loading && !error &&            <Row>
               {
                 tours?.map(tour => <Col lg='3' className='mb-4' key={tour._id}>
                   <TourCard tour={tour}/>

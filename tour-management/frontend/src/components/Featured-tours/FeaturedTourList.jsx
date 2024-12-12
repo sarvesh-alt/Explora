@@ -3,25 +3,8 @@ import TourCard from '../../shared/TourCard'
 
 import {Col} from 'reactstrap'
 
-<<<<<<< Updated upstream
-// watch 38:18 part of video after completing this code. or ask julekha!!
-
-const FeaturedTourList = () => {
-  return (
-    <>
-    {loading && <h4>Loading...</h4>}
-    {error && <h4>{error}</h4>}
-    {!loading && !error &&
-      featuredTours?.map(tour => (
-        <Col lg="3" md="6" sm="6" className="mb-4" key={tour._id}>
-          <TourCard tour={tour}/>
-        </Col>
-      ))}
-      </>
-    
-=======
 import useFetch from './../../hooks/useFetch';
-import {BASE_URL} from '../../utils /config';
+import {BASE_URL} from '../../utils/config';
 
 const FeaturedTourList = () => {
   const{data: featuredTours, loading, error} = useFetch(
@@ -42,7 +25,6 @@ const FeaturedTourList = () => {
             </Col>
       ))}
     </>
->>>>>>> Stashed changes
   );
 };
 
