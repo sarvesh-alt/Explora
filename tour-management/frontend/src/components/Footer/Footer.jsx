@@ -117,7 +117,7 @@ const Footer = () => {
 </ListGroup>
 </Col>
         <Col lg='12' className="text-center pt-5">
-        <p className="copyright">Copyright {year} ,design and developed by Sarvesh More, Julekha Khatoon , Divyang Vanik , Sahil Patel and Kshitiz Pal .
+        <p className="copyright">Copyright {year} ,design and developed by Sarvesh More, Julekha Khatoon and Divyang Vanik.
           All rights reserved.</p></Col>
         </Row>
       </Container>
